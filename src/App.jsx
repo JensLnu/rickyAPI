@@ -22,9 +22,9 @@ function App() {
 
   return (
     <>
-      <button onClick={() => setCharCounter(prev => prev + 1)}>Get new character</button>
+      <button onClick={() => {charCounter < 19 ? setCharCounter(prev => prev + 1) : setCharCounter(0)}}>Get new character</button>
       <div>
-        <Cards dataChar={dataChar[charCounter]}/>
+        <Cards dataChar={dataChar[charCounter]} />
       </div>
     </>
   )
